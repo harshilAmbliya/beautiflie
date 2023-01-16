@@ -1,43 +1,45 @@
 import React from 'react'
 
-export default function Index() {
+export default function Home() {
 
-   // const openNav =()=> {
-   //     document.getElementById("mySidenav").style.width = "100%"
+   // const openNav = () => {
+   //    document.getElementById("mySidenav").style.width = "100%"
    // }
 
-   // const handlecloseNav =()=> {
-   //     document.getElementById("mySidenav").style={width : "0"}
+   // const closeNav = () => {
+   //    document.getElementById("mySidenav").style.width = "0"
    // }
 
    return (
       <>
 
-<div className="header_section">
-         <div className="container-fluid">
-            <nav className="navbar navbar-light bg-light justify-content-between">
-               <div id="mySidenav" className="sidenav">
-                  <a href="/" className="closebtn" onclick="closeNav()">&times;</a>
-                  <a href="index.html">Home</a>
-                  <a href="products.html">Products</a>
-                  <a href="about.html">About</a>
-                  <a href="client.html">Client</a>
-                  <a href="contact.html">Contact</a>
-               </div>
-               <span className="toggle_icon" onclick="openNav()"><img src="./source/images/toggle-icon.png" alt=''/></span>
-               <a className="logo" href="index.html"><img src="./source/images/logo.png" alt=''/></a>
-               <form className="form-inline ">
-                  <div className="login_text">
-                     <ul>
-                        <li><a href="/"><img src="./source/images/user-icon.png" alt=''/></a></li>
-                        <li><a href="/"><img src="./source/images/bag-icon.png" alt=''/></a></li>
-                        <li><a href="/"><img src="./source/images/search-icon.png" alt=''/></a></li>
-                     </ul>
+         <div className="header_section">
+            <div className="container-fluid">
+               <nav className="navbar navbar-light bg-light justify-content-between">
+                  <div id="mySidenav" className="sidenav">
+                     <a href="/" className="closebtn" >&times;</a>
+                     {/* onclick={closeNav()} */}
+                     <a href="index.html">Home</a>
+                     <a href="products.html">Products</a>
+                     <a href="about.html">About</a>
+                     <a href="client.html">Client</a>
+                     <a href="contact.html">Contact</a>
                   </div>
-               </form>
-            </nav>
+                  <span className="toggle_icon" ><img src="./source/images/toggle-icon.png" alt='' /></span>
+                  {/* onclick={openNav()} */}
+                  <a className="logo" href="index.html"><img src="./source/images/logo.png" alt='' /></a>
+                  <form className="form-inline ">
+                     <div className="login_text">
+                        <ul>
+                           <li><a href="/"><img src="./source/images/user-icon.png" alt='' /></a></li>
+                           <li><a href="/"><img src="./source/images/bag-icon.png" alt='' /></a></li>
+                           <li><a href="/"><img src="./source/images/search-icon.png" alt='' /></a></li>
+                        </ul>
+                     </div>
+                  </form>
+               </nav>
+            </div>
          </div>
-      </div>
 
          <div className="banner_section layout_padding">
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
@@ -409,7 +411,7 @@ export default function Index() {
             </div>
             <div className="map_main">
                <div className="map-responsive">
-             
+
                </div>
             </div>
          </div>
@@ -456,16 +458,16 @@ export default function Index() {
                <div className="social_icon">
                   <ul>
                      <li>
-                        <a href="/">Facebook<i className="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="/">Facebook &nbsp;<i className="fa fa-facebook" aria-hidden="true"></i></a>
                      </li>
                      <li>
-                        <a href="/">Twitter<i className="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="/">Twitter &nbsp;<i className="fa fa-twitter" aria-hidden="true"></i></a>
                      </li>
                      <li>
-                        <a href="/">Linked in<i className="fa fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="/">Linked in &nbsp;<i className="fa fa-linkedin" aria-hidden="true"></i></a>
                      </li>
                      <li>
-                        <a href="/">Instagram<i className="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="/">Instagram &nbsp;<i className="fa fa-instagram" aria-hidden="true"></i></a>
                      </li>
                   </ul>
                </div>
