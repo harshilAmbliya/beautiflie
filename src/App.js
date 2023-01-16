@@ -1,11 +1,10 @@
 
-import './App.css';
-import Index from './componenets/Index';
+import Home from './componenets/Home';
 
 function App() {
   return (
     <>
-      <Index />
+      <Home />
     </>
   );
 }
