@@ -2,13 +2,13 @@ import React from 'react'
 
 export default function Home() {
 
-   // const openNav = () => {
-   //    document.getElementById("mySidenav").style.width = "100%"
-   // }
-
-   // const closeNav = () => {
-   //    document.getElementById("mySidenav").style.width = "0"
-   // }
+   const openNav = () => {
+      document.getElementById("mySidenav").style.width = "100%"
+   }
+  
+   const closeNav = () => {
+      document.getElementById("mySidenav").style.width = "0"
+   }
 
    return (
       <>
@@ -17,16 +17,16 @@ export default function Home() {
             <div className="container-fluid">
                <nav className="navbar navbar-light bg-light justify-content-between">
                   <div id="mySidenav" className="sidenav">
-                     <a href="/" className="closebtn" >&times;</a>
-                     {/* onclick={closeNav()} */}
+                     <a href="/" onClick={closeNav} className="closebtn" >&times;</a>
+                     {/*  */}
                      <a href="index.html">Home</a>
                      <a href="products.html">Products</a>
                      <a href="about.html">About</a>
                      <a href="client.html">Client</a>
                      <a href="contact.html">Contact</a>
                   </div>
-                  <span className="toggle_icon" ><img src="./source/images/toggle-icon.png" alt='' /></span>
-                  {/* onclick={openNav()} */}
+                  <span className="toggle_icon" onClick={openNav}><img src="./source/images/toggle-icon.png" alt='' /></span>
+                  {/*  */}
                   <a className="logo" href="index.html"><img src="./source/images/logo.png" alt='' /></a>
                   <form className="form-inline ">
                      <div className="login_text">
@@ -416,6 +416,7 @@ export default function Home() {
             </div>
          </div>
 
+
          <div className="footer_section layout_padding">
             <div className="container">
                <div className="footer_logo"><a href="index.html"><img alt='' src="./source/images/footer-logo.png" /></a></div>
@@ -479,8 +480,6 @@ export default function Home() {
                <p className="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
             </div>
          </div>
-
-
 
       </>
    )
