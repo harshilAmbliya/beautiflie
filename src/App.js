@@ -1,24 +1,25 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from './componenets/About';
-
+import Client from './componenets/Client';
+import Contact from './componenets/Contact';
 import Home from './componenets/Home';
-
 import Product from './componenets/Product';
 
 function App() {
-//   const openNav = () => {
-//     // document.getElementById("mySidenav").style.width = "100%"
-//     console.log("side nav",document.getElementById("mySidenav"));
-//  }
 
-//  const closeNav = () => {
-//     // document.getElementById("mySidenav").style.width = "0"
-//  }
   return (
     <>
-      <Home />
-      <About />
-      <Product />
+      <BrowserRouter>
+        <Routes>
+          <Route index exact path='/' element={<Home />} />
+          <Route exact path='/about' element={<About />} />
+          <Route exact path='/products' element={<Product />} />
+          <Route exact path='/client' element={<Client />} />
+          <Route exact path='/contact' element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+
     </>
   );
 }

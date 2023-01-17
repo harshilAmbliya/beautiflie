@@ -1,6 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Client(props) {
+    const openNav = () => {
+        document.getElementById("mySidenav").style.width = "100%"
+    }
+
+    const closeNav = () => {
+        document.getElementById("mySidenav").style.width = "0"
+    }
     return (
         <>
 
@@ -8,17 +16,16 @@ export default function Client(props) {
                 <div className="container-fluid">
                     <nav className="navbar navbar-light bg-light justify-content-between">
                         <div id="mySidenav" className="sidenav">
-                            <a href="/" onClick={props.closeNav} className="closebtn" >&times;</a>
-                            {/*  */}
-                            <a href="index.html">Home</a>
-                            <a href="products.html">Products</a>
-                            <a href="about.html">About</a>
-                            <a href="client.html">Client</a>
-                            <a href="contact.html">Contact</a>
+                            <a href="/" onClick={closeNav} className="closebtn" >&times;</a>
+                            <Link to="/">Home</Link>
+                            <Link to="/products">Products</Link>
+                            <Link to="/about">About</Link>
+                            <Link to="/client">Client</Link>
+                            <Link to="/contact">Contact</Link>
                         </div>
-                        <span className="toggle_icon" onClick={props.closeNav}><img src="./source/images/toggle-icon.png" alt='' /></span>
+                        <span className="toggle_icon" onClick={openNav}><img src="./source/images/toggle-icon.png" alt='' /></span>
                         {/*  */}
-                        <a className="logo" href="index.html"><img src="./source/images/logo.png" alt='' /></a>
+                        <Link className="logo" to="/"><img src="./source/images/logo.png" alt='' /></Link>
                         <form className="form-inline ">
                             <div className="login_text">
                                 <ul>
@@ -44,7 +51,7 @@ export default function Client(props) {
                                 <div class="client_section_2">
                                     <div class="client_main">
                                         <div class="client_left">
-                                            <div class="client_img"><img alt='' src="images/client-img.png" /></div>
+                                            <div class="client_img"><img alt='' src="./source/images/client-img.png" /></div>
                                         </div>
                                         <div class="client_right">
                                             <h3 class="name_text">Jonyro</h3>
@@ -57,7 +64,7 @@ export default function Client(props) {
                                 <div class="client_section_2">
                                     <div class="client_main">
                                         <div class="client_left">
-                                            <div class="client_img"><img alt='' src="images/client-img.png" /></div>
+                                            <div class="client_img"><img alt='' src="./source/images/client-img.png" /></div>
                                         </div>
                                         <div class="client_right">
                                             <h3 class="name_text">Jonyro</h3>
@@ -70,7 +77,7 @@ export default function Client(props) {
                                 <div class="client_section_2">
                                     <div class="client_main">
                                         <div class="client_left">
-                                            <div class="client_img"><img alt='' src="images/client-img.png" /></div>
+                                            <div class="client_img"><img alt='' src="./source/images/client-img.png" /></div>
                                         </div>
                                         <div class="client_right">
                                             <h3 class="name_text">Jonyro</h3>

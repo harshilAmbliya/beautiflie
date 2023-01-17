@@ -1,6 +1,14 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Product(props) {
+    const openNav = () => {
+        document.getElementById("mySidenav").style.width = "100%"
+    }
+
+    const closeNav = () => {
+        document.getElementById("mySidenav").style.width = "0"
+    }
     return (
         <>
 
@@ -8,17 +16,16 @@ export default function Product(props) {
                 <div className="container-fluid">
                     <nav className="navbar navbar-light bg-light justify-content-between">
                         <div id="mySidenav" className="sidenav">
-                            <a href="/" onClick={props.closeNav} className="closebtn" >&times;</a>
-                            {/*  */}
-                            <a href="index.html">Home</a>
-                            <a href="products.html">Products</a>
-                            <a href="about.html">About</a>
-                            <a href="client.html">Client</a>
-                            <a href="contact.html">Contact</a>
+                            <a href="/" onClick={closeNav} className="closebtn" >&times;</a>
+                            <Link to="/">Home</Link>
+                            <Link to="/products">Products</Link>
+                            <Link to="/about">About</Link>
+                            <Link to="/client">Client</Link>
+                            <Link to="/contact">Contact</Link>
                         </div>
-                        <span className="toggle_icon" onClick={props.closeNav}><img src="./source/images/toggle-icon.png" alt='' /></span>
+                        <span className="toggle_icon" onClick={openNav}><img src="./source/images/toggle-icon.png" alt='' /></span>
                         {/*  */}
-                        <a className="logo" href="index.html"><img src="./source/images/logo.png" alt='' /></a>
+                        <Link className="logo" to="/"><img src="./source/images/logo.png" alt='' /></Link>
                         <form className="form-inline ">
                             <div className="login_text">
                                 <ul>
@@ -45,7 +52,7 @@ export default function Product(props) {
                                 <div className="product_box">
                                     <h4 className="bursh_text">Beauty Bursh</h4>
                                     <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                                    <img alt='' src="images/img-1.png" className="image_1" />
+                                    <img alt='' src="./source/images/img-1.png" className="image_1" />
                                     <div className="btn_main">
                                         <div className="buy_bt">
                                             <ul>
@@ -61,7 +68,7 @@ export default function Product(props) {
                                 <div className="product_box">
                                     <h4 className="bursh_text">Beauty Bursh</h4>
                                     <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                                    <img alt='' src="images/img-2.png" className="image_1" />
+                                    <img alt='' src="./source/images/img-2.png" className="image_1" />
                                     <div className="btn_main">
                                         <div className="buy_bt">
                                             <ul>
@@ -77,7 +84,7 @@ export default function Product(props) {
                                 <div className="product_box">
                                     <h4 className="bursh_text">Beauty Bursh</h4>
                                     <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                                    <img alt='' src="images/img-3.png" className="image_1" />
+                                    <img alt='' src="./source/images/img-3.png" className="image_1" />
                                     <div className="btn_main">
                                         <div className="buy_bt">
                                             <ul>
@@ -93,73 +100,7 @@ export default function Product(props) {
                                 <div className="product_box">
                                     <h4 className="bursh_text">Beauty Bursh</h4>
                                     <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                                    <img alt='' src="images/img-4.png" className="image_1" />
-                                    <div className="btn_main">
-                                        <div className="buy_bt">
-                                            <ul>
-                                                <li className="active"><a href="/">Buy Now</a></li>
-                                                <li><a href="/">Buy Now</a></li>
-                                            </ul>
-                                        </div>
-                                        <h3 className="price_text">Price $30</h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-lg-3 col-sm-6">
-                                <div className="product_box">
-                                    <h4 className="bursh_text">Beauty Bursh</h4>
-                                    <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                                    <img alt='' src="images/img-5.png" className="image_1" />
-                                    <div className="btn_main">
-                                        <div className="buy_bt">
-                                            <ul>
-                                                <li className="active"><a href="/">Buy Now</a></li>
-                                                <li><a href="/">Buy Now</a></li>
-                                            </ul>
-                                        </div>
-                                        <h3 className="price_text">Price $30</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <div className="product_box">
-                                    <h4 className="bursh_text">Beauty Bursh</h4>
-                                    <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                                    <img alt='' src="images/img-6.png" className="image_1" />
-                                    <div className="btn_main">
-                                        <div className="buy_bt">
-                                            <ul>
-                                                <li className="active"><a href="/">Buy Now</a></li>
-                                                <li><a href="/">Buy Now</a></li>
-                                            </ul>
-                                        </div>
-                                        <h3 className="price_text">Price $30</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <div className="product_box">
-                                    <h4 className="bursh_text">Beauty Bursh</h4>
-                                    <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                                    <img alt='' src="images/img-7.png" className="image_1" />
-                                    <div className="btn_main">
-                                        <div className="buy_bt">
-                                            <ul>
-                                                <li className="active"><a href="/">Buy Now</a></li>
-                                                <li><a href="/">Buy Now</a></li>
-                                            </ul>
-                                        </div>
-                                        <h3 className="price_text">Price $30</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-3 col-sm-6">
-                                <div className="product_box">
-                                    <h4 className="bursh_text">Beauty Bursh</h4>
-                                    <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                                    <img alt='' src="images/img-8.png" className="image_1" />
+                                    <img alt='' src="./source/images/img-4.png" className="image_1" />
                                     <div className="btn_main">
                                         <div className="buy_bt">
                                             <ul>
@@ -177,7 +118,7 @@ export default function Product(props) {
                                 <div className="product_box">
                                     <h4 className="bursh_text">Beauty Bursh</h4>
                                     <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                                    <img alt='' src="images/img-9.png" className="image_1" />
+                                    <img alt='' src="./source/images/img-5.png" className="image_1" />
                                     <div className="btn_main">
                                         <div className="buy_bt">
                                             <ul>
@@ -193,7 +134,7 @@ export default function Product(props) {
                                 <div className="product_box">
                                     <h4 className="bursh_text">Beauty Bursh</h4>
                                     <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                                    <img alt='' src="images/img-10.png" className="image_1" />
+                                    <img alt='' src="./source/images/img-6.png" className="image_1" />
                                     <div className="btn_main">
                                         <div className="buy_bt">
                                             <ul>
@@ -209,7 +150,7 @@ export default function Product(props) {
                                 <div className="product_box">
                                     <h4 className="bursh_text">Beauty Bursh</h4>
                                     <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                                    <img alt='' src="images/img-11.png" className="image_1" />
+                                    <img alt='' src="./source/images/img-7.png" className="image_1" />
                                     <div className="btn_main">
                                         <div className="buy_bt">
                                             <ul>
@@ -225,7 +166,73 @@ export default function Product(props) {
                                 <div className="product_box">
                                     <h4 className="bursh_text">Beauty Bursh</h4>
                                     <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
-                                    <img alt='' src="images/img-12.png" className="image_1" />
+                                    <img alt='' src="./source/images/img-8.png" className="image_1" />
+                                    <div className="btn_main">
+                                        <div className="buy_bt">
+                                            <ul>
+                                                <li className="active"><a href="/">Buy Now</a></li>
+                                                <li><a href="/">Buy Now</a></li>
+                                            </ul>
+                                        </div>
+                                        <h3 className="price_text">Price $30</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-lg-3 col-sm-6">
+                                <div className="product_box">
+                                    <h4 className="bursh_text">Beauty Bursh</h4>
+                                    <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
+                                    <img alt='' src="./source/images/img-9.png" className="image_1" />
+                                    <div className="btn_main">
+                                        <div className="buy_bt">
+                                            <ul>
+                                                <li className="active"><a href="/">Buy Now</a></li>
+                                                <li><a href="/">Buy Now</a></li>
+                                            </ul>
+                                        </div>
+                                        <h3 className="price_text">Price $30</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-sm-6">
+                                <div className="product_box">
+                                    <h4 className="bursh_text">Beauty Bursh</h4>
+                                    <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
+                                    <img alt='' src="./source/images/img-10.png" className="image_1" />
+                                    <div className="btn_main">
+                                        <div className="buy_bt">
+                                            <ul>
+                                                <li className="active"><a href="/">Buy Now</a></li>
+                                                <li><a href="/">Buy Now</a></li>
+                                            </ul>
+                                        </div>
+                                        <h3 className="price_text">Price $30</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-sm-6">
+                                <div className="product_box">
+                                    <h4 className="bursh_text">Beauty Bursh</h4>
+                                    <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
+                                    <img alt='' src="./source/images/img-11.png" className="image_1" />
+                                    <div className="btn_main">
+                                        <div className="buy_bt">
+                                            <ul>
+                                                <li className="active"><a href="/">Buy Now</a></li>
+                                                <li><a href="/">Buy Now</a></li>
+                                            </ul>
+                                        </div>
+                                        <h3 className="price_text">Price $30</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-3 col-sm-6">
+                                <div className="product_box">
+                                    <h4 className="bursh_text">Beauty Bursh</h4>
+                                    <p className="lorem_text">incididunt ut labore et dolore magna aliqua. Ut enim </p>
+                                    <img alt='' src="./source/images/img-12.png" className="image_1" />
                                     <div className="btn_main">
                                         <div className="buy_bt">
                                             <ul>
