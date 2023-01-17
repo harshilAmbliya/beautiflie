@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
 
    const openNav = () => {
       document.getElementById("mySidenav").style.width = "100%"
    }
-  
+
    const closeNav = () => {
       document.getElementById("mySidenav").style.width = "0"
    }
@@ -18,16 +19,16 @@ export default function Home() {
                <nav className="navbar navbar-light bg-light justify-content-between">
                   <div id="mySidenav" className="sidenav">
                      <a href="/" onClick={closeNav} className="closebtn" >&times;</a>
-                     {/*  */}
-                     <a href="index.html">Home</a>
-                     <a href="products.html">Products</a>
-                     <a href="about.html">About</a>
-                     <a href="client.html">Client</a>
-                     <a href="contact.html">Contact</a>
+                     
+                     <Link to="/">Home</Link>
+                     <Link to="/products">Products</Link>
+                     <Link to="/about">About</Link>
+                     <Link to="/client">Client</Link>
+                     <Link to="/contact">Contact</Link>
                   </div>
                   <span className="toggle_icon" onClick={openNav}><img src="./source/images/toggle-icon.png" alt='' /></span>
                   {/*  */}
-                  <a className="logo" href="index.html"><img src="./source/images/logo.png" alt='' /></a>
+                  <Link className="logo" to="/"><img src="./source/images/logo.png" alt='' /></Link>
                   <form className="form-inline ">
                      <div className="login_text">
                         <ul>

@@ -1,27 +1,27 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function About(props) {
+export default function Contact() {
     const openNav = () => {
         document.getElementById("mySidenav").style.width = "100%"
-     }
-    
-     const closeNav = () => {
+    }
+
+    const closeNav = () => {
         document.getElementById("mySidenav").style.width = "0"
-     }
+    }
     return (
         <>
-
             <div className="header_section">
                 <div className="container-fluid">
                     <nav className="navbar navbar-light bg-light justify-content-between">
                         <div id="mySidenav" className="sidenav">
                             <a href="/" onClick={closeNav} className="closebtn" >&times;</a>
+
                             <Link to="/">Home</Link>
-                     <Link to="/products">Products</Link>
-                     <Link to="/about">About</Link>
-                     <Link to="/client">Client</Link>
-                     <Link to="/contact">Contact</Link>
+                            <Link to="/products">Products</Link>
+                            <Link to="/about">About</Link>
+                            <Link to="/client">Client</Link>
+                            <Link to="/contact">Contact</Link>
                         </div>
                         <span className="toggle_icon" onClick={openNav}><img src="./source/images/toggle-icon.png" alt='' /></span>
                         {/*  */}
@@ -38,25 +38,25 @@ export default function About(props) {
                     </nav>
                 </div>
             </div>
-            <div className="about_section layout_padding">
+
+            <div className="contact_section layout_padding">
                 <div className="container">
-                    <div className="about_section_main">
-                        <div className="row">
-                            <div className="col-md-6">
-                                <div className="about_taital_main">
-                                    <h1 className="about_taital">About Our beauty sotore</h1>
-                                    <p className="about_text">labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequatlabore et dolore magna
-                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                        commodo consequatlabore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                                    <div className="readmore_bt"><a href="/">Read More</a></div>
-                                </div>
-                            </div>
-                            <div className="col-md-6">
-                                <div><img alt='' src="./source/images/about-img.png" className="image_3" /></div>
+                    <div className="row">
+                        <div className="col-md-6">
+                            <h1 className="contact_taital">Get In Touch</h1>
+                            <p className="contact_text">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation  eu </p>
+                        </div>
+                        <div className="col-md-6">
+                            <div className="contact_main">
+                                <div className="contact_bt"><a href="/">Contact Form</a></div>
+                                <div className="newletter_bt"><a href="/">Newletter</a></div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className="map_main">
+                    <div className="map-responsive">
+                        <iFrame src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0" style={{border:"0", width: "100%"}} allowfullscreen=""></iFrame>
                     </div>
                 </div>
             </div>
@@ -72,20 +72,17 @@ export default function About(props) {
                                     <ul>
                                         <li>
                                             <a href="/">
-                                                <i className="fa fa-map-marker" aria-hidden="true"></i><span className="padding_left10">Address :
-                                                    Loram Ipusm</span>
+                                                <i className="fa fa-map-marker" aria-hidden="true"></i><span className="padding_left10">Address : Loram Ipusm</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="/">
-                                                <i className="fa fa-phone" aria-hidden="true"></i><span className="padding_left10">Call : +01
-                                                    1234567890</span>
+                                                <i className="fa fa-phone" aria-hidden="true"></i><span className="padding_left10">Call : +01 1234567890</span>
                                             </a>
                                         </li>
                                         <li>
                                             <a href="/">
-                                                <i className="fa fa-envelope" aria-hidden="true"></i><span className="padding_left10">Email :
-                                                    demo@gmail.com</span>
+                                                <i className="fa fa-envelope" aria-hidden="true"></i><span className="padding_left10">Email : demo@gmail.com</span>
                                             </a>
                                         </li>
                                     </ul>
@@ -93,8 +90,7 @@ export default function About(props) {
                             </div>
                             <div className="col-sm-4">
                                 <div className="footer_logo_1"><a href="index.html"><img alt='' src="./source/images/footer-logo.png" /></a></div>
-                                <p className="dummy_text">commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
+                                <p className="dummy_text">commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</p>
                             </div>
                             <div className="col-sm-4">
                                 <div className="main">
@@ -186,6 +182,7 @@ export default function About(props) {
                     <p className="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
                 </div>
             </div>
+
         </>
     )
 }
